@@ -1,0 +1,296 @@
+.dashboard {
+  flex: 1;
+  background-color: #181d23;
+  color: #ffffff;
+  padding: 0px 80px;
+  position: relative;
+  z-index: 0;
+
+  > h1 {
+    font-size: 2.2rem;
+    padding-top: 24px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+#hamburger {
+  width: 24px;
+  margin-top: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.dashboard__mainGrid {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.2fr) minmax(270px, 1fr) minmax(
+      270px,
+      1fr
+    );
+  grid-gap: 20px;
+  padding: 40px 0;
+  // grid-template-rows: 1fr 1fr;
+  // grid-template-areas: "welcome welcome thisMonth";
+}
+
+.dashboard__sec1 {
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
+  // padding-top: 30px;
+  // flex: 1;
+  // grid-row: 1;
+  grid-column: 1/4;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: minmax(300px, 1.2fr) minmax(270px, 1fr) minmax(
+      270px,
+      1fr
+    );
+}
+
+.dashboard__welcome {
+  // flex: 1;
+  // grid-area: "welcome";
+  // min-width: 610px;
+  // max-width: 830px;
+  // display: flex;
+  grid-column: 1/3;
+  position: relative;
+  background-color: #29313a;
+  border-radius: 20px;
+  padding: 14px 30px;
+  // height: 174.8px;
+
+  > img {
+    position: absolute;
+    width: 180px;
+    top: -8%;
+    right: 60px;
+    margin-left: 50px;
+  }
+}
+
+.dashboard__welcome__info {
+  margin-top: 10px;
+  margin-left: 5px;
+
+  p,
+  li {
+    font-size: 0.8rem;
+  }
+
+  > ul {
+    padding: 0;
+    line-height: 26px;
+    list-style: none;
+
+    > li {
+      display: flex;
+
+      &::before {
+        font-size: 3rem;
+        content: "•";
+        color: #ff007c;
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+.dashboard__thisMonth {
+  grid-column: 3/4;
+  // grid-row: 1;
+  // grid-area: "thisMonth";
+  background-color: #ff007c;
+  border-radius: 20px;
+  padding: 14px 20px 14px 10px;
+  height: max-content;
+  // max-width: 280px;
+}
+
+.small_font {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.dashboard__thisMonth__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.dashboard__sec2__balance {
+  // width: 300px;
+  background-color: #29313a;
+  border-radius: 22px;
+  padding: 10px;
+}
+
+.dashboard__sec2__balance__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dashboard__sec2__stats {
+  @extend .dashboard__sec2__balance;
+  margin-top: 20px;
+}
+
+.dashboard__sec2__stats__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dots {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dashboard__sec2__stats__info {
+  > p {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  > p:nth-child(1) {
+    margin-right: 20px;
+  }
+}
+
+.dashboard__sec3 {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.dashboard__sec3__analytics {
+  @extend .dashboard__sec2__balance;
+  // width: 250px;
+}
+
+.dashboard__sec3__analytics__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard__rect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 5px;
+  width: 40px;
+  height: 150px;
+  background-color: #00ccf2;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.dashboard__sec3__analytics__data {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  position: relative;
+  bottom: 20px;
+}
+
+.dashboard__sec3__successful {
+  display: flex;
+  justify-content: space-between;
+  background-color: #29313a;
+  padding: 15px;
+  border-radius: 22px;
+  // width: 240px;
+}
+
+.dashboard__sec3__progress {
+  @extend .dashboard__sec3__successful;
+
+  > aside {
+    display: flex;
+  }
+}
+
+.dashboard__sec3__progressBar {
+  width: 60px;
+  height: 60px;
+  background-color: #00ccf2;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.dashboard__sec3__progress__info {
+  > p:nth-child(3) {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 15px;
+  }
+}
+
+.dashboard__sec4 {
+  display: grid;
+}
+
+.dashboard__sec4__monthInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 8fr 1fr;
+  grid-column-gap: 20px;
+  // justify-content: start;
+  // align-items: flex-start;
+  // align-self: flex-start;
+  // align-items: center;
+}
+
+.dashboard__sec4__monthInfo__invoices {
+  background-color: #2d62ed;
+  padding: 15px 10px;
+  border-radius: 20px;
+  // width: 130px;
+  // margin-right: 20px;
+
+  > img {
+    margin-bottom: 20px;
+    width: 18px;
+    cursor: pointer;
+  }
+}
+
+.dashboard__sec4__monthInfo__downloads {
+  @extend .dashboard__sec4__monthInfo__invoices;
+  background-color: #7d00b5;
+  margin-right: 0;
+}
+
+.dashboard__sec4__calendar {
+  background-color: #29313a;
+  padding: 15px 20px;
+  border-radius: 20px;
+  // width: 240px;
+}
+
+.dashboard__sec4__calendar__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > img {
+    cursor: pointer;
+    width: 12px;
+  }
+}
+
+@import "./dashboard-responsive";

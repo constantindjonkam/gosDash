@@ -1,0 +1,239 @@
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  background-color: #181d23;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.sidebar > img {
+  color: blue;
+  width: 24px;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+#logo:hover #Rectangle_82,
+#logo:hover #Rectangle_84,
+#logo:hover #Rectangle_86 {
+  opacity: 1;
+}
+
+#logo:hover #Rectangle_83,
+#logo:hover #Rectangle_85 {
+  opacity: 0.5;
+}
+
+#logo:active #Rectangle_82,
+#logo:active #Rectangle_84,
+#logo:active #Rectangle_86,
+#logo:active #Rectangle_83,
+#logo:active #Rectangle_85 {
+  opacity: 1;
+}
+
+.sidebar__1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #181d23;
+  padding: 30px 15px;
+}
+
+.sidebar__menu {
+  margin-top: 60px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.sidebar__menu > li {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.sidebar__menu > li:nth-child(1) {
+  display: relative;
+}
+
+.sidebar__menu > li:nth-child(1)::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 25px;
+  left: 0;
+  z-index: 3;
+  border-left: 3px solid #00ccf2;
+  border-radius: 2px 0 2px 0;
+}
+
+.sidebar__menu > li > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sidebar__profile > img {
+  width: 32px;
+  margin-bottom: 60px;
+}
+
+.sidebar__2 {
+  background-color: #455060;
+  padding: 30px 15px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.sidebar__search {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 8px 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar__search > input {
+  border: 0;
+  outline: 0;
+  padding-left: 10px;
+  font-size: 0.95rem;
+  color: #272d3b;
+  width: 160px;
+}
+
+.sidebar__search > input::-webkit-input-placeholder {
+  color: #272d3b;
+  font-size: 0.9rem;
+}
+
+.sidebar__search > input:-ms-input-placeholder {
+  color: #272d3b;
+  font-size: 0.9rem;
+}
+
+.sidebar__search > input::-ms-input-placeholder {
+  color: #272d3b;
+  font-size: 0.9rem;
+}
+
+.sidebar__search > input::placeholder {
+  color: #272d3b;
+  font-size: 0.9rem;
+}
+
+.sidebar__search > img {
+  width: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.sidebar__toggler {
+  display: none;
+}
+
+.showMenuBtn {
+  display: none;
+}
+
+.showLogo {
+  display: none;
+}
+
+.sidebar__close {
+  font-weight: bolder;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sidebar__close:hover {
+  color: rgba(206, 14, 14, 0.774);
+}
+
+@media (max-width: 1365px) {
+  .showMenuBtn {
+    display: block;
+  }
+  .hideSidebar {
+    display: none;
+  }
+  .sidebar__2 {
+    position: fixed;
+    height: 100vh;
+    left: 63px;
+    opacity: 0.95;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1365px) {
+  .dashboard {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1045px) {
+  .sidebar {
+    display: none;
+  }
+  .showLogo {
+    display: block;
+  }
+  #hamburger {
+    display: block;
+  }
+  .sidebar__2 {
+    position: static;
+    height: inherit;
+    left: 0;
+  }
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    left: 0px;
+    opacity: 0.99;
+    z-index: 2;
+  }
+}
+/*# sourceMappingURL=sidebar.css.map */

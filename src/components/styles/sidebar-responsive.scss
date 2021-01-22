@@ -1,0 +1,51 @@
+@media (max-width: 1365px) {
+  .showMenuBtn {
+    display: block;
+  }
+
+  .hideSidebar {
+    display: none;
+  }
+
+  .sidebar__2 {
+    position: fixed;
+    height: 100vh;
+    left: 63px;
+    opacity: 0.95;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1365px) {
+  .dashboard {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1045px) {
+  .sidebar {
+    display: none;
+  }
+
+  .showLogo {
+    display: block;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .sidebar__2 {
+    position: static;
+    height: inherit;
+    left: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    left: 0px;
+    opacity: 0.99;
+    z-index: 2;
+  }
+}

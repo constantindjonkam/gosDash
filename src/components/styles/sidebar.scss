@@ -1,0 +1,161 @@
+$sidebar__padding: 15px;
+
+.sidebar {
+  // flex: 0.3;
+  display: flex;
+  color: white;
+  background-color: #181d23;
+  height: 100vh;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  > img {
+    color: blue;
+    width: 24px;
+  }
+}
+
+#logo {
+  cursor: pointer;
+
+  &:hover {
+    #Rectangle_82,
+    #Rectangle_84,
+    #Rectangle_86 {
+      opacity: 1;
+    }
+    #Rectangle_83,
+    #Rectangle_85 {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    #Rectangle_82,
+    #Rectangle_84,
+    #Rectangle_86,
+    #Rectangle_83,
+    #Rectangle_85 {
+      opacity: 1;
+    }
+  }
+}
+
+.sidebar__1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #181d23;
+  // border-right: 1px solid #455060;
+  padding: 30px $sidebar__padding;
+}
+
+.sidebar__menu {
+  margin-top: 60px;
+  flex: 1;
+
+  > li {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+
+    &:nth-child(1) {
+      display: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 25px;
+        left: 0;
+        z-index: 3;
+        border-left: 3px solid #00ccf2;
+        border-radius: 2px 0 2px 0;
+      }
+    }
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  > img {
+    width: 32px;
+    margin-bottom: 60px;
+  }
+}
+
+.sidebar__2 {
+  background-color: #455060;
+  padding: 30px $sidebar__padding;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.sidebar__search {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 8px 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  > input {
+    border: 0;
+    outline: 0;
+    padding-left: 10px;
+    font-size: 0.95rem;
+    color: #272d3b;
+    width: 160px;
+
+    &::placeholder {
+      color: #272d3b;
+      font-size: 0.9rem;
+    }
+  }
+
+  > img {
+    width: 16px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex !important;
+}
+
+.sidebar__toggler {
+  display: none;
+}
+
+.showMenuBtn {
+  display: none;
+}
+
+.showLogo {
+  display: none;
+}
+
+.sidebar__close {
+  font-weight: bolder;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(206, 14, 14, 0.774);
+  }
+}
+
+@import "sidebar-responsive";
